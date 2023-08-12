@@ -1,0 +1,35 @@
+:root {
+    --nav-primary: #ffe4b5;
+    --btn-add-primary: #20b2aa;
+    --btn-add-hover: #008b8b;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+nav {
+    background: var(--nav-primary) !important; /*lightgrey;*/
+}
+nav .logo-size {
+    font-size: 2rem;
+}
+
+.btn-add-custom,
+.btn-submit-custom {
+    background: var(--btn-add-primary);
+    color: white;
+}
+.btn-add-custom:hover,
+.btn-submit-custom:hover {
+    background: var(--btn-add-hover);
+    color: white;
+}
+#booklist button:not(.collapsed) {
+    background: var(--nav-primary) !important;
+}
+footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}

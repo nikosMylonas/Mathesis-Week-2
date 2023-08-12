@@ -1,0 +1,46 @@
+<div class='container'>
+    <h2 class='mt-3 mb-3'>My Books
+        <span class='badge bg-secondary'>{{books.length}}</span></h2>
+    <p>
+        <a class='btn btn-add-custom' href='/addbookform'>Προσθήκη Νέου Βιβλίου</a>
+    </p>
+    {{#if books}}
+        <div class='accordion mt-4' id='booklist'>
+            {{#each books}}
+                <div class='accordion-item'>
+                    <h2 class='accordion-header'>
+                        <button
+                            class='accordion-button {{#unless @first}}collapsed{{/unless}}'
+                            type='button'
+                            data-bs-toggle='collapse'
+                            data-bs-target='#book-item-{{@index}}'
+                            aria-expanded='{{#if @first}}true{{/if}} {{#unless @first}}false{{/unless}}'
+                            aria-controls='book-item-{{@index}}'
+                        >
+                            Tίτλος: {{this.title}}
+                        </button>
+                    </h2>
+                    <div
+                        id='book-item-{{@index}}'
+                        class='accordion-collapse collapse {{#if @first}}show{{/if}}'
+                        data-bs-parent='#booklist'
+                    >
+                        <div class='accordion-body'>
+                            - Συγγραφέας:
+                            {{this.author}}<br />
+                            - Εκδότης:
+                            {{this.editor}}<br />
+                            - Ετος:
+                            {{this.year}}
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    {{/if}}
+    {{#unless books}}
+        <div class='alert alert-warning' role='alert'>
+            No books registered!
+        </div>
+    {{/unless}}
+</div>
