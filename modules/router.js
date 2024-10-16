@@ -1,5 +1,5 @@
 import express from 'express';
-import { BookList } from './bookList.mjs';
+import { BookList } from './bookList.js';
 import { body, validationResult } from 'express-validator';
 
 const router = express.Router();

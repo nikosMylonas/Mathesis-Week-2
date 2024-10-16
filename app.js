@@ -1,6 +1,6 @@
 import express from "express";
 import { engine } from 'express-handlebars';
-import { router } from './modules/router.mjs';
+import { router } from './modules/router.js';
 
 // const date = new Date();
 // const currentYear = date.getFullYear();

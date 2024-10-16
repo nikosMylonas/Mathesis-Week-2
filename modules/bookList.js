@@ -1,6 +1,9 @@
 import fs from 'fs/promises';
 
 const fileName = './data/myBooks.json';
+// const fileName = '../../../data/myBooks.json'; // Run from contents/2_1/2_1_2/app.js
+
+
 
 class BookList {
     myBooks = { books: [] };

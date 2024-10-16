@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.mjs",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.mjs",
-    "dev": "nodemon app.mjs"
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "dev1": "cd contents/2_1/2_1_2 && nodemon app.js"
   },
   "keywords": [],
   "author": "",
